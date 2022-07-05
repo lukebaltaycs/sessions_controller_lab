@@ -1,0 +1,9 @@
+
+<% if session[:name]==nil %>
+    <h1>hi, <%= session[:name] %></h1>
+    <%= form_tag '/logout'%>
+        <%= submit_tag 'logout'%>
+    </form>
+<% else %>
+    <%= link_to "New", '/new' %>
+<% end %>
